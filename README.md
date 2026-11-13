@@ -55,8 +55,8 @@ codebase/
 ├── checkpoints/                   # Checkpoints directory (place downloaded weights here)
 │   └── time_aware_multimodal_fusion.pth
 ├── data/                          # Input data directory
-│   └── test_cohort_example.csv            # Input cohort metadata & note summaries
-└── data_csv/                      # Existing evaluation datasets
+    └── test_cohort_example.csv            # Input cohort metadata & note summaries
+
 ```
 
 ---
