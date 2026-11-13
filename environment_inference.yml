@@ -1,0 +1,38 @@
+# ==============================================================================
+# Conda Environment Specification for Mammo-FM Inference
+# Script: inference_emory.py
+#
+# Quick Installation:
+#   conda env create -f environment_inference.yml
+#   conda activate mammo_infer
+#
+# Verification:
+#   python -c "import torch, transformers, timm, cv2, pydicom, dicomsdl; print('Environment ready!')"
+# ==============================================================================
+
+name: mammo_infer
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  # Core PyTorch with CUDA support (adjust pytorch-cuda version if needed for your GPU driver)
+  - pytorch>=2.1.0
+  - torchvision>=0.16.0
+  - pytorch-cuda=12.1
+  # Ensures CXXABI / libstdc++ compatibility
+  - libstdcxx-ng>=12
+  - pip:
+      - transformers>=4.45.0        # Required for ModernBERT-base support
+      - timm>=1.0.0                 # Required for EfficientNet-B5 backbone
+      - opencv-python-headless>=4.8.0 # Mammogram image preprocessing & laterality detection
+      - pydicom>=2.4.0              # DICOM reading & VOI LUT processing
+      - dicomsdl>=0.109.0           # Fast DICOM pixel data decompression
+      - pillow>=10.0.0              # Image reading & manipulation
+      - pandas>=2.0.0               # CSV metadata parsing
+      - numpy>=1.24.0               # Matrix manipulation & embedding storage
+      - tqdm>=4.65.0                # Progress bar
+
