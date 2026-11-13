@@ -142,6 +142,15 @@ The inference script accepts a standard `.csv` file. The table below outlines th
 
 *Robust Fallbacks*: Missing image files or `NaN` paths are automatically caught and substituted with zero-tensors, ensuring the batch extraction never halts.
 
+### Temporal Window Requirements for Data
+When assembling cohorts for deployment or benchmarking:
+- **Clinical Notes (`summary`)**:
+  - Clinical notes are sampled from a target window spanning **3 months before diagnosis (`-3m`) to 2 months after diagnosis (`+2m`)** relative to the diagnosis date (`DX_DATE`).
+- **Mammography Acquisition Date (`Mammo_DATE`)**:
+  - **No specific date restrictions**: Mammograms do not need to fall within the $-3\text{m}/+2\text{m}$ window.
+  - The model features a **time-aware gating mechanism** that dynamically encodes the temporal gap.
+
+
 ### Sample CSV Row Example
 
 ```csv
