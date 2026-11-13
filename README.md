@@ -40,7 +40,7 @@ The framework performs multimodal patient retrieval by aligning multi-view mammo
 - **Text Backbone**: ModernBERT-base (768-dim per visit segment).
 - **Temporal Text Fusion**: TransformerEncoder with learnable `[CLS]` token and time-delta positional projection.
 - **Multimodal Fusion**: Bidirectional Cross Attention (BCA) modulated by a continuous time-decay gate $g = \max(0, 1 - \frac{\Delta t}{2})$ (where $\Delta t$ is the discrepancy in years between mammogram acquisition and diagnosis date).
-- **Standalone Instantiation**: The model architecture is built directly without requiring any multi-gigabyte base pretraining archive (`Mammo-FM_ASU_Trained_CLIP.tar`). All weights are directly hydrated from the unified multimodal checkpoint.
+- **Standalone Instantiation**: The model architecture is built directly without requiring any base pretraining archive. All weights are directly hydrated from the unified multimodal checkpoint.
 
 ---
 
