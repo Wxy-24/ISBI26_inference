@@ -1069,7 +1069,7 @@ def evaluate_model(
 # ==============================================================================
 def main():
     parser = argparse.ArgumentParser(
-        description="Extract unimodal & multimodal embeddings using ViewMeanPooling + Bidirectional Cross Attention."
+        description="Extract unimodal & multimodal embeddings."
     )
     parser.add_argument(
         "--csv",
