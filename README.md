@@ -1,6 +1,6 @@
-# ISBI 2026 - inference code
+# ISBI 2027 - inference code
 
-This repository provides the official deployment and inference codebase for our **ISBI 2026** submission:  
+This repository provides the official deployment and inference codebase for our **ISBI 2027** submission:  
 **"Time-Aware Multimodal Fusion of Mammograms and Clinical Notes for Breast Cancer Patient Retrieval"**.
 
 ---
