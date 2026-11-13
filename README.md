@@ -37,7 +37,6 @@ The framework performs multimodal patient retrieval by aligning multi-view mammo
 ```
 
 - **Image Backbone**: EfficientNet-B5 extracted from Mammo-FM (2048-dim output).
-- **View Fusion**: `ViewMeanPooling` (non-parametric average across 4 standard views).
 - **Text Backbone**: ModernBERT-base (768-dim per visit segment).
 - **Temporal Text Fusion**: TransformerEncoder with learnable `[CLS]` token and time-delta positional projection.
 - **Multimodal Fusion**: Bidirectional Cross Attention (BCA) modulated by a continuous time-decay gate $g = \max(0, 1 - \frac{\Delta t}{2})$ (where $\Delta t$ is the discrepancy in years between mammogram acquisition and diagnosis date).
@@ -106,7 +105,7 @@ python -c "import torch, transformers, timm, cv2, pydicom, dicomsdl; print('Envi
 The trained ISBI 2026 multimodal checkpoint is shared via Google Drive:
 
 * **Checkpoint Download Link**: [Google Drive Link](https://drive.google.com/file/d/1pPiK1YZ7U_52vrrw71HuSz8D0MaK1bbf/view?usp=drive_link)
-* **File Name**: `Emory_BCA_True_Happier_MeanPooling_MLPnorm_fp16_frozen_timefilter+decay_flipr2l_epoch1_LRdecay_valloss0.4883.pth`
+* **File Name**: `Emory_BCA_True_Happier_fp16_frozen_timedecay_flipr2l_epoch1_LRdecay_valloss0.4883.pth`
 
 ### Directory Placement
 
