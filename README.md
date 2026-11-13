@@ -178,7 +178,7 @@ python inference_emory.py \
 
 #### CLI Options
 
-- `--csv`: Path to the input CSV file *(default: automatically detects `data/test_cohort.csv` or existing test dataset in `data_csv/`)*.
+- `--csv`: Path to the input CSV file *(default: automatically detects `data/test_cohort_example.csv`)*.
 - `--ckpt`: Path to the multimodal `.pth` checkpoint *(default: `checkpoints/time_aware_multimodal_fusion.pth`)*.
 - `--direction`: Laterality flipping alignment (`r2l`, `l2r`, or `none`). Default is `'r2l'`.
 - `--batch_size`: Batch size for DataLoader *(default: `4`)*.
