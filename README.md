@@ -180,7 +180,7 @@ python inference_emory.py \
 
 - `--csv`: Path to the input CSV file *(default: automatically detects `data/test_cohort.csv` or existing test dataset in `data_csv/`)*.
 - `--ckpt`: Path to the multimodal `.pth` checkpoint *(default: `checkpoints/time_aware_multimodal_fusion.pth`)*.
-- `--direction`: Laterality flipping alignment (`r2l`, `l2r`, or `none`). Default is `'r2l'` (matching the training alignment).
+- `--direction`: Laterality flipping alignment (`r2l`, `l2r`, or `none`). Default is `'r2l'`.
 - `--batch_size`: Batch size for DataLoader *(default: `4`)*.
 - `--gate`: Time-gating mode: `'dynamic'` (time discrepancy decay) or `'static'` (forces `gate=1.0`).
 - `--output`: File path to save embeddings (`.npz` or `.pt`). Default is `extracted_embeddings.npz`.
